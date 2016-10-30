@@ -1,0 +1,67 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/javascript/actioin.js"></script>
+</head>
+<body>
+<div>
+    <h1>Ranking System</h1>
+</div>
+<div style="float: left">
+    <div>
+        <h3>입력 예제</h3>
+    </div>
+    <div>
+        <form name="insert" id="insert">
+            스코어입력 : <input type="text" name="insertData" id="insertData"><br>
+            <input type="button" value="전송" onclick="doInsert()">
+        </form>
+    </div>
+    <div>
+        <form name="register" id="register">
+            친구 등록 : <input type="text" name="registerFriend" id="registerFriend"><br>
+            <input type="button" value="전송" onclick="doResister()">
+        </form>
+    </div>
+    <div>
+        <form name="delete" id="delete">
+            친구 삭제 : <input type="text" name="deleteFriend" id="deleteFriend"><br>
+            <input type="button" value="전송" onclick="doDelete()">
+        </form>
+    </div>
+</div>
+
+<div style="float: left">
+    <div>
+        <h3>출력 예제</h3>
+    </div>
+    <div>
+        <form name="allRanking" id="allRanking">
+            전체 랭킹 : <input type="text" name="allRankingId" id="allRankingId"><br>
+            <input type="button" value="전송" onclick="doPrintAllRanking()">
+        </form>
+    </div>
+    <div>
+        <form name="myRanking" id="myRanking">
+            나의 랭킹 : <input type="text" name="myRankingId" id="myRankingId"><br>
+            <input type="button" value="전송" onclick="doPrintMyRanking()">
+        </form>
+    </div>
+    <div>
+        <form name="FriendRanking" id="friendRanking">
+            친구 랭킹 : <input type="text" name="friendRankingId" id="friendRankingId"><br>
+            <input type="button" value="전송" onclick="doPrintFriendRanking()">
+        </form>
+    </div>
+    <div>
+        <form name="FriendList" id="friendList">
+            친구 리스트 : <input type="text" name="friendListId" id="friendListId"><br>
+            <input type="button" value="전송" onclick="doPrintFriendList()">
+        </form>
+    </div>
+</div>
+
+<div id="stage">
+</div>
+</body>
+</html>

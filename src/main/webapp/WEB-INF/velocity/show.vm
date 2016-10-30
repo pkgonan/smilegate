@@ -1,0 +1,5 @@
+<div>
+    #foreach ($list in $List)
+        <h10>$list</h10>
+    #end
+</div>
