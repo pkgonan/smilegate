@@ -10,10 +10,9 @@ import java.util.concurrent.PriorityBlockingQueue;
 public class RankingService {
     final static int PRIORITY_QUEUE_BIG_SIZE = 1000000;
     final static int PRIORITY_QUEUE_SMALL_SIZE = 10;
-
-    public static PriorityBlockingQueue<RankingData> rankingQueue = new PriorityBlockingQueue<RankingData>(PRIORITY_QUEUE_BIG_SIZE, new DataComparator());
-    public static Map<String, Integer> allRankingData = new HashMap<String, Integer>();
-    public static Map<String, LinkedList<String>> myFriend = new HashMap<String, LinkedList<String>>();
+    final static PriorityBlockingQueue<RankingData> rankingQueue = new PriorityBlockingQueue<RankingData>(PRIORITY_QUEUE_BIG_SIZE, new DataComparator());
+    final static Map<String, Integer> allRankingData = new HashMap<String, Integer>();
+    final static Map<String, LinkedList<String>> myFriend = new HashMap<String, LinkedList<String>>();
 
     public void insert(String id, int score) {
         allRankingData.put(id, score);
@@ -22,7 +21,7 @@ public class RankingService {
             rankingQueue.add(new RankingData(id, score));
         }
         else {
-            Iterator<RankingData> iterator = rankingQueue.iterator();
+            final Iterator<RankingData> iterator = rankingQueue.iterator();
             while(iterator.hasNext()) {
                 if(iterator.next().getId().equals(id)) {
                     iterator.remove();
